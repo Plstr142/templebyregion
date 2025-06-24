@@ -63,7 +63,7 @@ const templeImages = [
   }
 ];
 
-const page = () => {
+const Page = () => {
   // State สำหรับจำนวนคอลัมภ์และ auto play
   const [columns, setColumns] = useState(4);
   const [autoPlay, setAutoPlay] = useState(true);
@@ -103,7 +103,7 @@ const page = () => {
           {/* ปุ่มเปิด/ปิด Auto Play */}
           <div className="flex gap-2 mb-8">
             <button
-              className={`px-4 py-2 rounded border ${autoPlay ? "bg-[#6d6867d8] text-white" : "bg-white text-[#8b6a51]"}`}
+              className={`px-4 py-2 rounded border ${autoPlay ? "bg-[#6d6867d8] text-white" : "bg-white text-[#6d6867d8]"}`}
               onClick={() => setAutoPlay(true)}
             >
               Auto Play
@@ -333,4 +333,4 @@ const page = () => {
     </>
   )
 }
-export default page
+export default Page

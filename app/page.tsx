@@ -134,14 +134,17 @@ const Page = () => {
                   id="watthai"
                   className="wat flex justify-center items-center h-[340px] bg-white/80 rounded-lg shadow-lg"
                 >
-                  <Image
-                    src={temple.src}
-                    alt={temple.alt}
-                    width={260}
-                    height={260}
-                    className="object-contain rounded"
-                    priority
-                  />
+                  <div className="flex justify-center items-center w-[300px] h-[300px] overflow-hidden rounded" style={{ background: "#eee" }}>
+                    <Image
+                      id="imagewatthai"
+                      className="imagewatthai2 object-cover w-[300px] h-[300px]"
+                      src={temple.src}
+                      alt={temple.alt}
+                      width={300}
+                      height={300}
+                      priority
+                    />
+                  </div>
                 </div>
               </SwiperSlide>
             ))}
@@ -177,10 +180,6 @@ const Page = () => {
             ))}
           </Swiper>
         </div> */}
-
-
-
-
 
       {/* <div className='pt-16'>
         <Swiper slidesPerView={4}
@@ -247,16 +246,6 @@ const Page = () => {
 
         </Swiper>
       </div> */}
-
-
-
-      {/* <div className="">
-        <div className="">page</div>
-        <h1>Hello</h1>
-        <Button variant={"default"} size={"lg"}>Logo</Button>
-        <Button onClick={handleClick}>Toast me!</Button>
-      </div> */}
-
 
       {/* แบบ pagination */}
       {/* <div className={`text-center flex flex-col items-center justify-center bg-transparent ${playfair.className}`}>

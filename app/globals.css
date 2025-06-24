@@ -124,3 +124,26 @@
     @apply bg-background text-foreground;
   }
 }
+
+#temple {
+  min-height: 100vh;
+}
+
+.templeall {
+}
+
+#watthai {
+}
+
+.wat {
+}
+
+#imagewatthai {
+}
+
+.imagewatthai2 {
+  object-fit: cover;
+  width: 300px;
+  height: 300px;
+  border-radius: 0.5rem;
+}

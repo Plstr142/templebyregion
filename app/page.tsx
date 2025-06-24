@@ -1,7 +1,8 @@
 "use client";
-import { Button } from "@/components/ui/button"
+// import { Button } from "@/components/ui/button"
 // import { toast, Toaster } from "sonner";
 import { Swiper, SwiperSlide } from 'swiper/react';
+import Image from "next/image";
 
 
 import 'swiper/css';
@@ -9,6 +10,12 @@ import 'swiper/css/navigation';
 
 import { Navigation } from 'swiper/modules';
 
+import { Playfair_Display } from "next/font/google";
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
 
 const page = () => {
   // const handleClick = () => {
@@ -24,27 +31,78 @@ const page = () => {
         <Button onClick={handleClick}>Toast me!</Button>
       </div> */}
 
-      <div className="">
-        <h1>Hello</h1>
-          <div className="">
-            <input type="text" className="bg-gray border border-gray-500 justify-center w-[50%]"/>
-          </div>
+
+
+      <div className={`text-center flex flex-col items-center justify-center bg-transparent ${playfair.className}`}>
+        <h1 className="text-5xl font-bold text-[#6d6867d8] tracking-wide mb-6">TEMPLE IN THAILAND</h1>
+
+        <div className="relative">
+          <input
+            type="text"
+            className="bg-white border border-[#8B5E3C] focus:border-[#C19A6B] focus:ring-2 focus:ring-[#EED6C4] w-[300px] p-3 rounded shadow-md placeholder:text-gray-500"
+            placeholder="Search any one place"
+          />
+        </div>
       </div>
 
-      <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
-        <SwiperSlide>
-          <img src="/assets/images/WatArun.jpg" alt="Temple 1" className="w-55 h-55" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="/assets/images/WatPhraBorommathatChaiya.jpg" alt="Temple 2" className="w-55 h-55" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="/assets/images/WatPhraThatDoiSuthep.jpg" alt="Temple 3" className="w-55 h-55" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="/assets/images/WatYansangwararam.jpg" alt="Temple 4" className="w-55 h-55" />
-        </SwiperSlide>
-      </Swiper>
+      <div className='pt-16'>
+        <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
+          <SwiperSlide>
+            <div className="flex justify-center items-center h-full">
+
+              <Image
+                src="/assets/images/WatArun.jpg"
+                alt="Temple 1"
+                width={300}
+                height={300}
+                className="w-55 h-55"
+                priority
+              />
+            </div>
+
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="flex justify-center items-center h-full">
+
+              <Image
+                src="/assets/images/WatPhraBorommathatChaiya.jpg"
+                alt="Temple 2"
+                width={300}
+                height={300}
+                className="w-55 h-55"
+                priority
+              />
+            </div>
+
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="flex justify-center items-center h-full">
+              <Image
+                src="/assets/images/WatPhraThatDoiSuthep.jpg"
+                alt="Temple 3"
+                width={300}
+                height={300}
+                className="w-55 h-55"
+                priority
+              />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="flex justify-center items-center h-full">
+              <Image
+                src="/assets/images/WatYansangwararam.jpg"
+                alt="Temple 4"
+                width={300}
+                height={300}
+                className="w-55 h-55"
+                priority
+              />
+            </div>
+          </SwiperSlide>
+
+        </Swiper>
+      </div>
+
     </>
   )
 }

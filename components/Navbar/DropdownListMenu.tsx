@@ -1,6 +1,6 @@
 import { AlignLeft } from "lucide-react"
 import { Button } from "@/components/ui/button";
-import UserIcon from "./UserIcon";
+
 
 import {
     DropdownMenu,
@@ -14,6 +14,7 @@ import Link from "next/link";
 import { links } from "@/utils/links";
 import SignOutLinks from "./SignOutLinks";
 import { SignedIn, SignedOut, SignInButton, SignUpButton } from "@clerk/nextjs";
+import UserIcon from "./UserIcon";
 
 
 // test const type string , number

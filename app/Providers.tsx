@@ -1,7 +1,6 @@
 import React from "react"
-// import { Toaster } from "@/components/ui/sonner"
-
 import { ThemeProvider } from "./theme-provider"
+// import { Toaster } from "@/components/ui/sonner"
 
 const Providers = ({ children }: { children: React.ReactNode }) => {
   return (
